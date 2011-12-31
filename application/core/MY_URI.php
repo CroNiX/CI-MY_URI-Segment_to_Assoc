@@ -41,7 +41,7 @@ class MY_URI extends CI_URI
 	function rsegment_to_assoc($n = 3, $default = array())
 	
 	{
-		return $this->segment_to_assoc($n, $default, 'rsegment');
+		return $this->_segment_to_assoc($n, $default, 'rsegment');
 	}
 	
 	/**
