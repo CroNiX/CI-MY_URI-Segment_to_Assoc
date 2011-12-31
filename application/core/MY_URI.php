@@ -38,8 +38,7 @@ class MY_URI extends CI_URI
 	 * @return Array
 	 *
 	 */
-	function rsegment_to_assoc($n = 3, $default = array())
-	
+	function rsegment_to_assoc($n = 3, $default = array())	
 	{
 		return $this->_segment_to_assoc($n, $default, 'rsegment');
 	}
@@ -57,7 +56,7 @@ class MY_URI extends CI_URI
 	function _segment_to_assoc($n = 3, $default = array(), $which = 'segment')
 	{
 		//get the requested segment
-		$segment = ($which == 'segment') ? $this->segment($n) : $this->rsegment($n);
+		$segment = ($which == 'segment') ? $this->segment($n, $default) : $this->rsegment($n, $default);
 		//return if there isn't a segment here
 		if($segment === FALSE) return FALSE;
 		
